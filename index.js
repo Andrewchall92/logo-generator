@@ -1,5 +1,6 @@
-const inquirer = require('inquirer');
+const inquire = require('inquirer');
 const fs = require('fs');
+const Shape = require('./library/shapes.js');
 
 inquire
     .prompt([
@@ -9,7 +10,7 @@ inquire
             type: 'input',
         },
         {
-            name: 'text-color',
+            name: 'textColor',
             message: 'Enter a text color.',
             type: 'input',
         },
@@ -20,11 +21,13 @@ inquire
             choices: ['Circle', 'Square', 'Triangle'],
         },
         {
-            name: 'shape-color',
+            name: 'shapeColor',
             message: 'Enter a shape color',
             type: 'input',
         },
 
-    ]);
-    
+    ])
+    .then((data) => {
+        console.log(data.shape);
 
+    })
