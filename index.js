@@ -1,6 +1,6 @@
 const inquire = require('inquirer');
 const fs = require('fs');
-const Shape = require('./library/shapes.js');
+const Shape = require('./library/shapes');
 
 inquire
     .prompt([
@@ -28,6 +28,7 @@ inquire
 
     ])
     .then((data) => {
-        console.log(data.shape);
+        console.log(data);
+        new Shape(data.text, data.textColor, data.shape, data.shapeColor);
 
-    })
+    });
