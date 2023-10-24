@@ -1,7 +1,8 @@
 const inquire = require('inquirer');
 const fs = require('fs');
-const Shape = require('./library/shapes');
-
+const Circle = require('./library/shapes').Circle;
+const Square = require('./library/shapes').Square;
+const Triangle = require('./library/shapes').Triangle;
 inquire
     .prompt([
         {
@@ -29,6 +30,38 @@ inquire
     ])
     .then((data) => {
         console.log(data);
-        new Shape(data.text, data.textColor, data.shape, data.shapeColor);
+        if(data.shape === 'Circle') {
+            const newCircle = new Circle(data.text, data.textColor,data.shapeColor);
+            let svgString = newCircle.toSVGString();
+
+            fs.writeFile('./assets/logo.svg', svgString, (err) => {
+                console.log('Logo Generated!');
+                console.log(svgString);
+                console.log(newCircle);
+             });
+        } else if(data.shape === 'Square') {
+            const newSquare = new Square(data.text, data.textColor,data.shapeColor);
+            let svgString = newSquare.toSVGString();
+
+            fs.writeFile('./assets/logo.svg', svgString, (err) => {
+                console.log('Logo Generated!');
+                console.log(svgString);
+                console.log(newSquare);
+             });
+        } else if(data.shape === 'Triangle') {
+            const newTriangle = new Triangle(data.text, data.textColor,data.shapeColor);
+            let svgString = newTriangle.toSVGString();
+
+            fs.writeFile('./assets/logo.svg', svgString, (err) => {
+                console.log('Logo Generated!');
+                console.log(svgString);
+                console.log(newTriangle);
+             });
+        } else {
+            return
+        }
+        // new Shape(data.text, data.textColor, data.shape, data.shapeColor);
 
     });
+
+    
