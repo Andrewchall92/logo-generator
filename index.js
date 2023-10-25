@@ -3,6 +3,7 @@ const fs = require('fs');
 const Circle = require('./library/shapes').Circle;
 const Square = require('./library/shapes').Square;
 const Triangle = require('./library/shapes').Triangle;
+
 inquire
     .prompt([
         {
