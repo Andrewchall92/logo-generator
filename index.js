@@ -32,7 +32,7 @@ inquire
         console.log(data);
         if(data.shape === 'Circle') {
             const newCircle = new Circle(data.text, data.textColor,data.shapeColor);
-            let svgString = newCircle.toSVGString();
+            let svgString = newCircle.render();
 
             fs.writeFile('./assets/logo.svg', svgString, (err) => {
                 console.log('Logo Generated!');
@@ -41,7 +41,7 @@ inquire
              });
         } else if(data.shape === 'Square') {
             const newSquare = new Square(data.text, data.textColor,data.shapeColor);
-            let svgString = newSquare.toSVGString();
+            let svgString = newSquare.render();
 
             fs.writeFile('./assets/logo.svg', svgString, (err) => {
                 console.log('Logo Generated!');
@@ -50,7 +50,7 @@ inquire
              });
         } else if(data.shape === 'Triangle') {
             const newTriangle = new Triangle(data.text, data.textColor,data.shapeColor);
-            let svgString = newTriangle.toSVGString();
+            let svgString = newTriangle.render();
 
             fs.writeFile('./assets/logo.svg', svgString, (err) => {
                 console.log('Logo Generated!');
@@ -60,8 +60,6 @@ inquire
         } else {
             return
         }
-        // new Shape(data.text, data.textColor, data.shape, data.shapeColor);
-
     });
 
     
