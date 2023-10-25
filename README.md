@@ -3,13 +3,10 @@
 ## Description
 This application runs in the console and generates a logo.svg file based on your answers to specific questions. You can input up to three letters for the text content and then choose between a triangle, circle, or square. Additionally, you have options to customize the shape and text colors to your preference. 
 
-  <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">  
-          <circle cx="150" cy="100" r="80" fill="red"/>
-          <text x="150" y="120" font-size="60" text-anchor="middle" fill="white">DGG</text>
-          </svg>
+![Example of a circle logo](./Images/logo-example.png)
 
-          Example of a circle logo 
-                       
+*Example of a circle logo*
+
 [Watch Demo Video](https://watch.screencastify.com/v/lSkUHjUZsqOBTfZKR6Io)
 
 ## Installation
