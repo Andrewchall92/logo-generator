@@ -7,7 +7,7 @@ describe('Circle', () => {
         const shape = new Circle('DGG', 'blue', 'red');
         expect(shape.render()).toBe( `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">  
         <circle cx="150" cy="100" r="80" fill="red"/>
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill="blue">DGG</text>
+        <text x="150" y="120" font-size="60" text-anchor="middle" fill="blue">DGG</text>
         </svg>`);
     });
 });
@@ -18,7 +18,7 @@ describe('Square', () => {
         const shape = new Square('DGG', 'blue', 'red');
         expect(shape.render()).toBe( `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
         <rect x="50" y="20" width="150" height="150" fill="red" />
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill="blue">DGG</text>
+        <text x="125" y="115" font-size="60" text-anchor="middle" fill="blue">DGG</text>
         </svg>`);
     });
 });
