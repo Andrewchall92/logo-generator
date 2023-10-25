@@ -35,27 +35,21 @@ inquire
             let svgString = newCircle.render();
 
             fs.writeFile('./assets/logo.svg', svgString, (err) => {
-                console.log('Logo Generated!');
-                console.log(svgString);
-                console.log(newCircle);
+                console.log("Generated circle logo.svg!");
              });
         } else if(data.shape === 'Square') {
             const newSquare = new Square(data.text, data.textColor,data.shapeColor);
             let svgString = newSquare.render();
 
             fs.writeFile('./assets/logo.svg', svgString, (err) => {
-                console.log('Logo Generated!');
-                console.log(svgString);
-                console.log(newSquare);
+                console.log("Generated square logo.svg!");
              });
         } else if(data.shape === 'Triangle') {
             const newTriangle = new Triangle(data.text, data.textColor,data.shapeColor);
             let svgString = newTriangle.render();
 
             fs.writeFile('./assets/logo.svg', svgString, (err) => {
-                console.log('Logo Generated!');
-                console.log(svgString);
-                console.log(newTriangle);
+                console.log("Generated triangle logo.svg!");
              });
         } else {
             return
